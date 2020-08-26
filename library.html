@@ -7,24 +7,27 @@
     </head>
 
     <body>
-        <h1 id = "main-heading">Online Library</h1>
-        <button id = "book-button">"New Book"</button>
+        <p id = "main-heading">Online Library</p>
+        <button id = "book-button">+</button>
         <div class = "book-container">
             <form id = "book-form">
-                <label> Title: </label>
+                <div id = "title-form">
+                        <label class = "labels"> Title: </label>
+                        <input class = "textbox" type = "text" id = "title-text" value = " Enter title of book"/>
+                </div>
                 <br>
-                <input type = "text" id = "title-text" value = " Enter title of book"/>
+                <div id = "author-form">
+                        <label class = "labels"> Author: </label>
+                        <input class = "textbox" type = "text" id = "author-text" value = " Enter author's name">
+                </div>
                 <br>
-                <label> Author: </label>
-                <br>
-                <input type = "text" id = "author-text" value = " Enter author's name">
-                <br>
-                <label> Pages: </label>
-                <br>
-                <input type = "text" id = "pages-text" value = " Number of pages">
+                <div id = "pages-form">
+                    <label class = "labels"> Pages: </label>
+                    <input class = "textbox" type = "text" id = "pages-text" value = " Number of pages">
+                </div>
                 <br>
                 <input type = "checkbox"  id = "read-book-button">
-                <label for = "read-book">Have you read this book?</label>
+                <label for = "read-book">Read?</label>
             </form>
         </div>
 
