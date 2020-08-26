@@ -1,6 +1,70 @@
+.book-container
+{
+    margin: auto;
+    display: block;
+    background-color: red;
+    height: 25rem;
+    width: 25rem;
+
+}
+
+.textbox
+{
+    margin-left: 1.25rem;
+    border-radius: 2rem;
+    height: 2rem;
+}
+
+.labels
+{
+    font-size: 1.25rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 #main-heading
 {
     display: block;
     margin-top: 7rem;
     text-align: center;
+    font-size: 4rem;
+}
+
+#book-form
+{
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 3rem;
+}
+
+#title-form
+{
+    padding: 1rem;
+}
+
+#author-form
+{
+    padding: 1rem;
+}
+
+#pages-form
+{
+    padding: 1rem;
+}
+
+
+#book-button
+{
+    display: block;
+    margin: auto;
+    width: 12rem;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 2rem;
+}
+
+
+#read-book-button
+{
+    margin-top: 1rem;
 }
