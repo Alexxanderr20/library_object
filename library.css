@@ -1,6 +1,6 @@
 body
 {
-    background-color: black;
+    /* background-color: black; */
 }
 .book-container
 {
@@ -78,8 +78,28 @@ body
     border-radius: 2rem;
 }
 
+#read-book-button-form
+{
+    display: block;
+    position: relative;
+    font-size: 1.25rem;
+}
 
 #read-book-button
 {
-    margin-top: 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: black;
+}
+
+.div input
+{
+        position: absolute;
+        cursor: pointer;
+        opacity: 0;
+        height: 0;
+        width: 0;
 }
