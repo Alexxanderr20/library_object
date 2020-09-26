@@ -7,34 +7,34 @@
     </head>
 
     <body>
-        <!-- <p id = "main-heading">Online Library</p> -->
 
-        <div id = "book-button-form">
-        <button id = "book-button">+</button> 
+        <div class = "wrapper">
+                <div id = "book-form">
+                    <div id = "title-form">
+                            <label class = "labels"> Title: </label>
+                            <input class = "textbox" type = "text" id = "title-text">
+                    </div>
+
+                    <div id = "author-form">
+                            <label class = "labels"> Author: </label>
+                            <input class = "textbox" type = "text" id = "author-text" >
+                    </div>
+
+                    <div id = "pages-form">
+                        <label class = "labels"> Pages: </label>
+                        <input class = "textbox" type = "text" id = "pages-text" >
+                    </div>
+
+                    <div id = "read-book-button-form">
+                        <input type = "checkbox"  id = "read-book-button">
+                        <label for = "read-book">Read?</label>
+                    </div>
+
+                </div>
         </div>
 
-        <div class = "book-container">
-            <form id = "book-form">
-                <div id = "title-form">
-                        <label class = "labels"> Title: </label>
-                        <input class = "textbox" type = "text" id = "title-text">
-                </div>
-                <br>
-                <div id = "author-form">
-                        <label class = "labels"> Author: </label>
-                        <input class = "textbox" type = "text" id = "author-text" >
-                </div>
-                <br>
-                <div id = "pages-form">
-                    <label class = "labels"> Pages: </label>
-                    <input class = "textbox" type = "text" id = "pages-text" >
-                </div>
-                <br>
-                <div id = "read-book-button-form">
-                    <input type = "checkbox"  id = "read-book-button">
-                    <label for = "read-book">Read?</label>
-                </div>
-            </form>
+        <div id = "new-book-button">
+            <button>New Book</button>
         </div>
 
         <script src = "library.js"></script>
