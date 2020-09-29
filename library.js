@@ -8,20 +8,10 @@ const authorInput = document.getElementById("author-text");
 const pagesInput = document.getElementById("pages-text");
 //const readInput = document.getElementById("")
 
-
+//Creating Event Listeners
+clearButton.addEventListener("click", clearButton);
 //creating a empty array to hold books
 let myNewLibrary = [];
-
-// function defaultBooks()
-// {
-//     var bookOne = new book("Harry Potter", "J.K. Rowling" , 624, true);
-//     var bookTwo = new book("It", "Stephen King" , 912, true);
-//     var bookThree = new book("The Da Vinci Code", "Dan Brown" , 200, true);
-
-//     console.log(bookOne);
-//     console.log(bookTwo);
-//     console.log(bookThree);
-// }
 
      function book(title, author, numOfPages, haveRead)
     {
@@ -31,18 +21,32 @@ let myNewLibrary = [];
         this.read = haveRead;
     }
 
-function addNewBookToLibrary(name, author, pages, readStatus)
-{
-    let books = new book(name,author, pages, readStatus);
-    myNewLibrary.push(books);
-}
+    function getNewBook()
+    {
+        const bookTitle = titleInput.value;
+        const authorName = authorInput.value;
+        const pageNumber = pagesInput.value;
+        myNewLibrary.push(new book(title, author, numOfPages, haveRead));
+    }
+
+// function addNewBookToLibrary()
+// {
+//     let books = new book(name,author, pages, readStatus);
+//     myNewLibrary.push(books);
+// }
 
 function clearBooks()
 {
     titleInput.value = "";
     authorInput.value = "";
     pagesInput.value = "";
-
+}
 // displayBook();
 
-defaultBooks();
+
+function addNewBook()
+{
+
+}
+
+clearBooks();
