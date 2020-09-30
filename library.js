@@ -1,14 +1,25 @@
+/*
+    Edward Alexander Muñoz
+*/
+
+
 //Adding DOM Selectors for User interaction
-const bookCard = document.getElementById("#book-container");
-const bookButton = document.getElementById("#book-button");
-const addButton = document.getElementById("#add-book-button");
-const deleteButton = document.getElementById("#delete-book-button");
-const titleInput = document.getElementById("#title-text");
-const authorInput = document.getElementById("#author-text");
-const pagesInput = document.getElementById("#pages-text");
+const bookCard = document.querySelector("#book-container");
+const bookButton = document.querySelector("#book-button");
+const addButton = document.querySelector("#add-book-button");
+const deleteButton = document.querySelector("#delete-book-button");
+const titleInput = document.querySelector("#title-text");
+const authorInput = document.querySelector("#author-text");
+const pagesInput = document.querySelector("#pages-text");
+const readInput = document.querySelector("#read-book-button");
+
 
 //creating a empty array to hold books
 let myNewLibrary = [];
+
+
+//creating Event Listeners
+addButton.addEventListener("click", addNewBookToLibrary);
 
 class Book
 {
@@ -21,3 +32,16 @@ class Book
         }
 }
 
+function addNewBookToLibrary(e)
+{
+    let bookTitle = titleInput.value;
+    let authorName = authorInput.value;
+    let numOfPages = pagesInput.value;
+    let haveRead = readInput.value;
+
+    let book = new Book(bookTitle, authorName, numOfPages, haveRead);
+    myNewLibrary.push(book);
+}
+
+
+console.log(myNewLibrary);
