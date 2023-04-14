@@ -1,47 +1,47 @@
-/*
-    Edward Alexander Muñoz
-*/
+let myLibrary = [
+    {
+        title: "The Hobbit",
+        author: "J.R.R. Tolkien",
+        year: 1937
+    },
 
+    {
+        title: "The Lord of the Rings",
+        author: "J.R.R. Tolkien",
+        year: 1954
+    },
 
-//Adding DOM Selectors for User interaction
-const bookCard = document.querySelector("#book-container");
-const bookButton = document.querySelector("#book-button");
-const addButton = document.querySelector("#add-book-button");
-const deleteButton = document.querySelector("#delete-book-button");
-const titleInput = document.querySelector("#title-text");
-const authorInput = document.querySelector("#author-text");
-const pagesInput = document.querySelector("#pages-text");
-const readInput = document.querySelector("#read-book-button");
+    {
+        title: "The Silmarillion",
+        author: "J.R.R. Tolkien",
+        year: 1977
+    }
+];
 
-
-//creating a empty array to hold books
-let myNewLibrary = [];
-
-
-//creating Event Listeners
-addButton.addEventListener("click", addNewBookToLibrary);
-
-class Book
+function displayBook()
 {
-    constructor(title, author, numOfPages, haveRead)
-        {
-            this.title = title,
-            this.author = author,
-            this.pages = numOfPages,
-            this.read = haveRead;
-        }
+  const bookshelf = document.getElementById("bookshelf");
+
+  for(let i = 0; i < myLibrary.length; i++)
+    {
+        let book = document.createElement("div");
+        book.classList.add("book");
+    
+        let bookTitle = document.createElement("h3");
+        bookTitle.textContent = myLibrary[i].title;
+        book.appendChild(bookTitle);
+    
+        let bookAuthor = document.createElement("h4");
+        bookAuthor.textContent = myLibrary[i].author;
+        book.appendChild(bookAuthor);
+    
+        let bookYear = document.createElement("p");
+        bookYear.textContent = myLibrary[i].year;
+        book.appendChild(bookYear);
+    
+        bookshelf.appendChild(book);
+    }
 }
 
-function addNewBookToLibrary(e)
-{
-    let bookTitle = titleInput.value;
-    let authorName = authorInput.value;
-    let numOfPages = pagesInput.value;
-    let haveRead = readInput.value;
 
-    let book = new Book(bookTitle, authorName, numOfPages, haveRead);
-    myNewLibrary.push(book);
-}
-
-
-console.log(myNewLibrary);
+displayBook();
