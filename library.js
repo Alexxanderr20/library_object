@@ -1,23 +1,22 @@
-let myLibrary = [
-    {
-        title: "The Hobbit",
-        author: "J.R.R. Tolkien",
-        year: 1937
-    },
+function createBook(title, author, pages, read)
+{
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
 
+    this.info = function()
     {
-        title: "The Lord of the Rings",
-        author: "J.R.R. Tolkien",
-        year: 1954
-    },
-
-    {
-        title: "The Silmarillion",
-        author: "J.R.R. Tolkien",
-        year: 1977
+        console.log(title + " by " + author + ", " + pages + " pages, " + read);
     }
-];
+}
 
+const book1 = new createBook('The Hobbit', 'J.R.R. Tolkien', 295, 'Read')
+const book2 = new createBook('The Lord of the Rings', 'J.R.R. Tolkien', 1137, 'Read')
+console.log(book1.info());
+console.log(book2.info());
+
+let myLibrary = [book1, book2];
 function displayBook()
 {
   const bookshelf = document.getElementById("bookshelf");
